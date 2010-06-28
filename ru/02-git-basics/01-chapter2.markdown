@@ -281,7 +281,7 @@ To see what you’ve changed but not yet staged, type `git diff` with no other a
 
 That command compares what is in your working directory with what is in your staging area. The result tells you the changes you’ve made that you haven’t yet staged.
 
-Если вы хотите посмотреть, что вы проиндексировали и что войдет в следующий коммит, вы можете выполнить `git diff –-cached`. (В Git версии 1.6.1 и выше, вы также можете использовать `git diff –-staged`, которая легче запоминается.) Эта команда сравнивает ваши индексированные изменения с последним коммитом:
+Если вы хотите посмотреть, что вы проиндексировали и что войдет в следующий коммит, вы можете выполнить `git diff --cached`. (В Git версии 1.6.1 и выше, вы также можете использовать `git diff --staged`, которая легче запоминается.) Эта команда сравнивает ваши индексированные изменения с последним коммитом:
 
 If you want to see what you’ve staged that will go into your next commit, you can use `git diff –-cached`. (In Git versions 1.6.1 and later, you can also use `git diff –-staged`, which may be easier to remember.) This command compares your staged changes to your last commit:
 
@@ -489,14 +489,14 @@ Note the backslash (`\`) in front of the `*`. This is necessary because Git does
 
 	$ git rm \*~
 
-Эта команда удаляет все файлы чьи именя заканчиваются на `~`.
+Эта команда удаляет все файлы, чьи имена оканчиваются на `~`.
 
 This command removes all files that end with `~`.
 
 ### Перемещение Файлов ###
 ### Moving Files ###
 
-В отличие от многих других систем версионного контроля, Git не отслеживает непосредственно перемещение файла. Если вы переименовываете файл в репозитории, то в Git не сохраняется никаких метаданных которые бы могли сообщить Git что вы переименовали файл. Однако, Git достаточно догадлив в плане обнаружения перемещений постфактум — мы рассмотрим обнаружение перемещения файлов чуть позже.
+В отличие от многих других систем версионного контроля, Git не отслеживает непосредственно перемещение файла. Если вы переименовываете файл в репозитории, то в Git не сохраняется никаких метаданных которые бы могли сообщить Git, что вы переименовали файл. Однако, Git достаточно догадлив в плане обнаружения перемещений постфактум — мы рассмотрим обнаружение перемещения файлов чуть позже.
 
 Unlike many other VCS systems, Git doesn’t explicitly track file movement. If you rename a file in Git, no metadata is stored in Git that tells it you renamed the file. However, Git is pretty smart about figuring that out after the fact — we’ll deal with detecting file movement a bit later.
 
@@ -529,7 +529,7 @@ However, this is equivalent to running something like this:
 	$ git rm README.txt
 	$ git add README
 
-Git неявно определяет, что было переименование, поэтому не важно переименуете вы файл так или используя команду `mv`. Единственное отличие состоит лишь в том, что `mv` это одна команда вместо трех — это <convenience function>. Важнее другое — вы можете использовать любой способ/программу чтобы переименовать файл, и затем перед коммитом выполнить add/rm.
+Git неявно определяет, что было переименование, поэтому неважно переименуете вы файл так или используя команду `mv`. Единственное отличие состоит лишь в том, что `mv` — одна команда вместо трех — это чистый вопрос удобства. Важнее другое — вы можете использовать любой способ/программу чтобы переименовать файл, и затем перед коммитом выполнить add/rm.
 
 Git figures out that it’s a rename implicitly, so it doesn’t matter if you rename a file that way or with the `mv` command. The only real difference is that `mv` is one command instead of three — it’s a convenience function. More important, you can use any tool you like to rename a file, and address the add/rm later, before you commit.
 
@@ -581,7 +581,7 @@ A huge number and variety of options to the `git log` command are available to s
 
 One of the more helpful options is `-p`, which shows the diff introduced in each commit. You can also use `-2`, which limits the output to only the last two entries:
 
-	$ git log –p -2
+	$ git log -p -2
 	commit ca82a6dff817ec66f44342007202690a93763949
 	Author: Scott Chacon <schacon@gee-mail.com>
 	Date:   Mon Mar 17 21:52:11 2008 -0700
