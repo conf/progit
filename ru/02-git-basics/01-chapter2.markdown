@@ -946,7 +946,7 @@ You can see that the changes have been reverted. You should also realize that th
 
 Remember, anything that is committed in Git can almost always be recovered. Even commits that were on branches that were deleted or commits that were overwritten with an `--amend` commit can be recovered (see Chapter 9 for data recovery). However, anything you lose that was never committed is likely never to be seen again.
 
-## Работа с удалёнными репозиторями ##
+## Работа с удалёнными репозиториями ##
 ## Working with Remotes ##
 
 Чтобы иметь возможность работать вместе над каким-либо Git-проектом, необходимо знать как управлять удалёнными репозиториями. Удалённые репозитории — это модификации проекта, которые хранятся в интернете или ещё где-то в сети. Их может быть несколько, каждый из которых как правило доступен для вас либо только на чтение, либо на чтение и запись. Совместная работа включает в себя управление удалёнными репозиториями и помещение (push) и получение (pull) данных в и из них, когда нужно обменяться результатами работы.
