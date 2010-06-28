@@ -678,21 +678,21 @@ The most interesting option is `format`, which allows you to specify your own lo
 Таблица 2-1 содержит список наиболее полезных параметров формата.
 
 	Параметр	Описание выводимых данных
-	%H	Хэш коммита
-	%h	Сокращенный хэш коммита
-	%T	Хэш дерева
-	%t	Сокращенных хэш дерева
-	%P	Хэши родительских коммитов
-	%p	Сокращенные хэши родительских коммитов
-	%an	Имя автора
-	%ae	Электронная почта автора
-	%ad	Дата автора (формат соответствует параметру –date= )
-	%ar	Дата автора, относительная (пр. "2 мес. назад")
-	%cn	Имя коммиттера
-	%ce	Электронная почта коммиттера
-	%cd	Дата коммиттера
-	%cr	Дата коммиттера, относительная
-	%s	Комментарий
+	%H          Хэш коммита
+	%h	        Сокращенный хэш коммита
+	%T	        Хэш дерева
+	%t          Сокращенный хэш дерева
+	%P          Хэши родительских коммитов
+	%p          Сокращенные хэши родительских коммитов
+	%an         Имя автора
+	%ae         Электронная почта автора
+	%ad         Дата автора (формат соответствует параметру `--date=`)
+	%ar         Дата автора, относительная (пр. "2 мес. назад")
+	%cn         Имя коммиттера
+	%ce         Электронная почта коммиттера
+	%cd         Дата коммиттера
+	%cr         Дата коммиттера, относительная
+	%s          Комментарий
 
 Table 2-1 lists some of the more useful options that format takes.
 
@@ -713,11 +713,11 @@ Table 2-1 lists some of the more useful options that format takes.
 	%cr	Committer date, relative
 	%s	Subject
 
-Вы может быть интересно в чем же разница между _автором_ и _коммиттером_. Автор — это человек, изначально сделавший работу, тогда как коммиттер — это человек, который последним применил эту работу. Так что если вы послали патч(заплатку) в проект и один из основных разработчиков применил этот патч, вы оба не будете забыты — вы как автор а разработчик как коммиттер. Мы чуть подробнее рассмотрим это различие в Главе 5.
+Вы может быть интересно в чем же разница между _автором_ и _коммиттером_. Автор — это человек, изначально сделавший работу, тогда как коммиттер — это последний человек, взявшийся за эту работу. Так что, если вы послали патч(заплатку) в проект, и один из основных разработчиков применил этот патч, вы оба не будете забыты — вы как автор, а разработчик как коммиттер. Мы чуть подробнее рассмотрим это различие в Главе 5.
 
 You may be wondering what the difference is between _author_ and _committer_. The author is the person who originally wrote the work, whereas the committer is the person who last applied the work. So, if you send in a patch to a project and one of the core members applies the patch, both of you get credit — you as the author and the core member as the committer. We’ll cover this distinction a bit more in Chapter 5.
 
-Параметры oneline и format также полезны с другим параметром команды `log` — `--graph`. Этот параметр добавляет миленький ASCII граф показывающий вашу ветку и историю слияний, **which we can see our copy of the Grit project repository**:
+Параметры oneline и format также полезны с другим параметром команды `log` — `--graph`. Этот параметр добавляет миленький ASCII граф, показывающий вашу ветку и историю слияний, которую мы можем посмотреть в нашей копии репозитория Grit:
 
 The oneline and format options are particularly useful with another `log` option called `--graph`. This option adds a nice little ASCII graph showing your branch and merge history, which we can see our copy of the Grit project repository:
 
@@ -735,16 +735,16 @@ The oneline and format options are particularly useful with another `log` option
 
 Мы рассмотрели только самые простые параметры форматирования вывода для `git log` — их гораздо больше. Таблица 2-2 содержит как параметры уже рассмотренные нами так и другие могущие быть полезными параметры, вместе с описанием эффекта от их использования.
 
-	Параметр	Описание
-	-p	Выводит патч(заплатку/diff) внесенный каждым коммитом.
-	--stat	Выводит статистику по файлам измененным в каждом коммите.
-	--shortstat	Отображает только измененные/добавленные/удаленные строки вывода команды --stat.
-	--name-only	Выводит список измененных файлов после каждого коммита.
+	Параметр	    Описание
+	-p	            Выводит патч(заплатку/diff), внесенный каждым коммитом.
+	--stat	        Выводит статистику по файлам, измененным в каждом коммите.
+	--shortstat	    Отображает только измененные/добавленные/удаленные строки вывода команды --stat.
+	--name-only	    Выводит список измененных файлов после каждого коммита.
 	--name-status	Выводит список файлов вместе с информацией добавлен/изменен/удален.
 	--abbrev-commit	Выводит только первые несколько символов контрольной суммы SHA-1 вместо всех 40.
 	--relative-date	Выводит дату в относительном формате (например, “2 недели назад”) вместо использования полного формата даты.
-	--graph	Выводит ASCII граф ветвей и истории слияний рядом с выводом лога.
-	--pretty	Выводит коммиты в альтернативном формате. Параметры включают oneline, short, full, fuller, и format (где вы можете указать свой собственный формат).
+	--graph	        Выводит ASCII граф ветвей и истории слияний рядом с выводом лога.
+	--pretty	    Выводит коммиты в альтернативном формате. Параметры включают oneline, short, full, fuller, и format (где вы можете указать свой собственный формат).
 
 Those are only some simple output-formatting options to `git log` — there are many more. Table 2-2 lists the options we’ve covered so far and some other common formatting options that may be useful, along with how they change the output of the log command.
 
@@ -762,38 +762,38 @@ Those are only some simple output-formatting options to `git log` — there are 
 ### Ограничение вывода команды log ###
 ### Limiting Log Output ###
 
-Кроме опций для форматирования вывода, git log имеет ряд полезных ограничительных параметров, то есть параметров, которые дают возможность отобразить часть коммитов. Вы уже видели один из таких параметров — параметр `-2`, который отображает только два последних коммита. На самом деле, вы  можете задать `-<n>`, где `n` это количество отображаемых коммитов. На практике вам врядли придётся часто этим пользоваться потому, что по умолчанию Git через канал (pipe) отправляет весь вывод на pager, так что вы всегда будете видеть только одну страницу.
+Кроме опций для форматирования вывода, git log имеет ряд полезных ограничительных параметров, то есть параметров, которые дают возможность отобразить часть коммитов. Вы уже видели один из таких параметров — параметр `-2`, который отображает только два последних коммита. На самом деле, вы  можете задать `-<n>`, где `n` это количество отображаемых коммитов. На практике вам вряд ли придётся часто этим пользоваться, потому что по умолчанию Git через канал (pipe) отправляет весь вывод на pager, так что вы всегда будете видеть только одну страницу.
 
 In addition to output-formatting options, git log takes a number of useful limiting options — that is, options that let you show only a subset of commits. You’ve seen one such option already — the `-2` option, which show only the last two commits. In fact, you can do `-<n>`, where `n` is any integer to show the last `n` commits. In reality, you’re unlikely to use that often, because Git by default pipes all output through a pager so you see only one page of log output at a time.
 
-А вот, параметры ограничивающие по времени такие как `--since` и `--until` весьма полезны. Например, следующая команда выдаёт список коммитов сделаных за последние две недели.
+А вот, параметры ограничивающие по времени, такие как `--since` и `--until` весьма полезны. Например, следующая команда выдаёт список коммитов, сделанных за последние две недели.
 
 However, the time-limiting options such as `--since` and `--until` are very useful. For example, this command gets the list of commits made in the last two weeks:
 
 	$ git log --since=2.weeks
 
-Эта команда может работать с множеством форматов — вы можете указать точную дату (“2008-01-15”) или относительную дату такую как “2 years 1 day 3 minutes ago”.
+Эта команда может работать с множеством форматов — вы можете указать точную дату (“2008-01-15”) или относительную дату, такую как “2 years 1 day 3 minutes ago”.
 
 This command works with lots of formats — you can specify a specific date (“2008-01-15”) or a relative date such as “2 years 1 day 3 minutes ago”.
 
-Вы также можете отфильтровать список коммитов так, чтобы получить те, которые удовлетворяют какому-то критерию поиска. Опция `--author` позволяет фильтровать по автору, опцию `--grep` позволяет искать по ключевым словам в сообщении. (Заметим, что, если вы укажете и опцию author, и опцию grep, то будут найдены все коммиты, которые удовлетворяют первому ИЛИ второму критерию. Чтобы найти коммиты, которые удовлетворяют первому И второму критерию, следует добавить опцию `--all-match`.)
+Вы также можете отфильтровать список коммитов так, чтобы получить те, которые удовлетворяют какому-то критерию поиска. Опция `--author` позволяет фильтровать по автору, опция `--grep` позволяет искать по ключевым словам в сообщении. (Заметим, что, если вы укажете и опцию author, и опцию grep, то будут найдены все коммиты, которые удовлетворяют первому ИЛИ второму критерию. Чтобы найти коммиты, которые удовлетворяют первому И второму критерию, следует добавить опцию `--all-match`.)
 
 You can also filter the list to commits that match some search criteria. The `--author` option allows you to filter on a specific author, and the `--grep` option lets you search for keywords in the commit messages. (Note that if you want to specify both author and grep options, you have to add `--all-match` or the command will match commits with either.)
 
-Последняя действительно полезная опция-фильтр для `git log` это путь. Указав имя директории или файла, вы ограничите вывод log теми коммитами, которые вносят изменения в указанные файлы. Эта опция всегда указывается последней и обычно предваряется двумя минусами (`--`), чтобы отделить пути от остальных опций.
+Последняя действительно полезная опция-фильтр для `git log` это путь. Указав имя директории или файла, вы ограничите вывод log теми коммитами, которые вносят изменения в указанные файлы. Эта опция всегда указывается последней и обычно предваряется двумя дефисами (`--`), чтобы отделить пути от остальных опций.
 
 The last really useful option to pass to `git log` as a filter is a path. If you specify a directory or file name, you can limit the log output to commits that introduced a change to those files. This is always the last option and is generally preceded by double dashes (`--`) to separate the paths from the options.
 
-В таблице 2-3 для справки приведён список частоупоребляемых опций.
+В таблице 2-3 для справки приведён список часто-употребляемых опций.
 
 In Table 2-3 we’ll list these and a few other common options for your reference.
 
-	Опция	Описание
-	-(n)	Показать последние n коммитов
+	Опция	            Описание
+	-(n)	            Показать последние n коммитов
 	--since, --after	Ограничить коммиты теми, которые сделаны после указанной даты.
 	--until, --before	Ограничить коммиты теми, которые сделаны до указанной даты.
-	--author	Показать только те коммиты, автор которых соответствует указанной строке.
-	--committer	Показать только те коммиты, коммитер которых соответствует указанной строке.
+	--author	        Показать только те коммиты, автор которых соответствует указанной строке.
+	--committer	        Показать только те коммиты, коммитер которых соответствует указанной строке.
 
 	Option	Description
 	-(n)	Show only the last n commits
@@ -802,7 +802,7 @@ In Table 2-3 we’ll list these and a few other common options for your referenc
 	--author	Only show commits in which the author entry matches the specified string.
 	--committer	Only show commits in which the committer entry matches the specified string.
 
-Например, если вы хотите посмотреть из истории Git такие коммиты, которые вносят изменения в тестовые файлы, были сделаны Junio Hamano, не являются слияниями, которые были сделаны в октябре 2008го, вы можете выполнить что-то вроде такого:
+Например, если вы хотите посмотреть из истории Git такие коммиты, которые вносят изменения в тестовые файлы, были сделаны Junio Hamano, не являются слияниями и были сделаны в октябре 2008-го, вы можете выполнить что-то вроде такого:
 
 For example, if you want to see which commits modifying test files in the Git source code history were committed by Junio Hamano and were not merges in the month of October 2008, you can run something like this:
 
